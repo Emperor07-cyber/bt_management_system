@@ -1,0 +1,154 @@
+.login-page {
+  min-height: 100vh;
+  background: #f6f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 430px;
+}
+
+.login-brand {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-logo {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 12px;
+  border-radius: 13px;
+  background: #172033;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.login-brand h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #172033;
+}
+
+.login-brand p {
+  margin: 6px 0 0;
+  color: #8b93a5;
+  font-size: 12px;
+}
+
+.login-card {
+  background: white;
+  border: 1px solid #e8eaf0;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(23, 32, 51, 0.05);
+}
+
+.login-heading {
+  margin-bottom: 25px;
+}
+
+.login-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #172033;
+}
+
+.login-heading p {
+  margin: 7px 0 0;
+  color: #858d9d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.login-error {
+  background: #fff1f1;
+  border: 1px solid #ffd5d5;
+  color: #c03939;
+  padding: 11px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #3d4657;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.input-wrapper {
+  height: 45px;
+  border: 1px solid #dfe2e8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  color: #939aaa;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #172033;
+}
+
+.input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  min-width: 0;
+  font-size: 13px;
+  color: #172033;
+}
+
+.password-toggle {
+  border: none;
+  background: transparent;
+  color: #8b93a5;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.login-button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  background: #172033;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.login-button:hover {
+  opacity: 0.93;
+}
+
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  text-align: center;
+  color: #a0a7b5;
+  font-size: 10px;
+  margin-top: 20px;
+}

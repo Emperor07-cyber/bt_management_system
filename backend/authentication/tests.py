@@ -81,6 +81,24 @@ class RoleBasedPermissionTests(TestCase):
                 self.allowed(user, method, "/api/v1/inventory/items/")
             )
 
+    def test_django_superuser_has_full_module_access_without_role_rows(self):
+        user = User.objects.create_superuser(
+            username="django_superuser@test",
+            password="test-password",
+        )
+
+        for path in (
+            "/api/v1/inventory/items/",
+            "/api/v1/fleet/vehicles/",
+            "/api/v1/assets/",
+            "/api/v1/finance/expenses/",
+            "/api/v1/procurement/orders/",
+            "/api/v1/company/employees/",
+            "/api/v1/reports/dashboard/",
+        ):
+            with self.subTest(path=path):
+                self.assertTrue(self.allowed(user, "GET", path))
+
     def test_manager_can_create_and_update_but_not_delete(self):
         user = self.user_for_role("Manager")
 

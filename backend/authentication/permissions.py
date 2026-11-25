@@ -44,6 +44,10 @@ class RoleBasedPermission(BasePermission):
             return False
         if getattr(user, "status", None) != "ACTIVE":
             return False
+        # Django superusers are global administrators. They should not need
+        # a separate application Role/RolePermission row for every module.
+        if getattr(user, "is_superuser", False):
+            return True
         return RolePermission.objects.filter(
             role__user_roles__user=user,
             permission__permission_code=permission_code,
